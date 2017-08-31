@@ -1,10 +1,12 @@
 from sales_tax_input_parser import SalesTaxInputParser
-from sales_tax_calculate import SalesTaxCalculate
+from sales_tax_calculator import SalesTaxCalculator
+from receipt import Receipt
 
 def main():
     deatils_input = list(multiline_input())
-    items_data = SalesTaxInputParser(deatils_input).get_items_details()
-    SalesTaxCalculate(items_data)
+    line_items = SalesTaxInputParser(deatils_input).get_line_items_details()
+    receipt = Receipt(line_items)
+    receipt.print_bill()
 
 def multiline_input():
     try:
