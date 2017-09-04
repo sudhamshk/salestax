@@ -13,7 +13,7 @@ class Receipt:
         for line_item in self.line_items:
                 line_item_tax = self.sales_tax_calculator.calculate_sales_tax(line_item)
                 line_item.set_tax(line_item_tax)
-                line_item.print_line_item_details()
+                line_item.print_line_item()
                 sales_tax = line_item.tax + sales_tax
                 line_item_cost = line_item.get_line_item_cost()
                 total = line_item_cost + total

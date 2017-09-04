@@ -1,7 +1,7 @@
 
 
 class SalesTaxCalculator:
-    tax_exemted = {"books" : ["book"],
+    tax_exempted = {"books" : ["book"],
                    "food" : ["chocolate bar", "box of chocolates"],
                    "Medical" : ["packet of headache pills"]}
 
@@ -14,7 +14,7 @@ class SalesTaxCalculator:
         self.line_item = line_item
         products = []
 
-        for values in self.tax_exemted.values():
+        for values in self.tax_exempted.values():
             for value in values:
                 products.append(value)
 

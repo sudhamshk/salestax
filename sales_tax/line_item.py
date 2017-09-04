@@ -19,7 +19,7 @@ class LineItems:
     def get_line_item_cost(self):
         return float(self.quantity)*(self.tax + self.value)
 
-    def print_line_item_details(self):
+    def print_line_item(self):
         if self.imported:
             print "%s imported %s: %s" % (self.quantity, self.name, float(self.quantity)*(self.tax + self.value))
         else:
